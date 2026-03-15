@@ -1,27 +1,17 @@
-// Smooth Scroll
-document.querySelectorAll('nav a').forEach(anchor => {
+// Smooth scrolling
 
-    anchor.addEventListener('click', function(e) {
+document.querySelectorAll("nav a").forEach(link => {
 
-        e.preventDefault();
+link.addEventListener("click", function(e){
 
-        document.querySelector(this.getAttribute('href'))
-        .scrollIntoView({
-            behavior: 'smooth'
-        });
+e.preventDefault();
 
-    });
+const section = document.querySelector(this.getAttribute("href"));
 
+section.scrollIntoView({
+behavior: "smooth"
 });
 
-
-// Contact Form Alert
-document.querySelector("form").addEventListener("submit", function(e){
-
-    e.preventDefault();
-
-    alert("Thank you for contacting me! 😊");
-
-    this.reset();
+});
 
 });
